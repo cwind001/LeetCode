@@ -23,7 +23,7 @@ public class NumberOfOneBits {
 
     @Test
     public void testHammingWeight(){
-        assertEquals(3, tester.hammingWeight(11));
+        assertEquals(2, tester.hammingWeight(12));
         assertEquals(1, tester.hammingWeight(32));
         assertEquals(1, tester.hammingWeight(Integer.MAX_VALUE + 1));
     }
