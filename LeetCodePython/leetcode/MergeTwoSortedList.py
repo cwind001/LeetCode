@@ -23,7 +23,7 @@ class MergeTwoSortedList:
         pass
     # @param two ListNodes
     # @return a ListNode
-    def merge_two_lists(self, l1, l2):  # linear in sum of length of two lists
+    def mergeTwoLists(self, l1, l2):  # linear in sum of length of two lists
         head, put_away = None, None
         while l1 or l2:
             # find the elem to put away
@@ -51,10 +51,12 @@ class MergeTwoSortedList:
         return head
 
 tester = MergeTwoSortedList()
-print tester.merge_two_lists(ListNode(0), ListNode(1))
+print tester.mergeTwoLists(ListNode(0), ListNode(1))
+m = {}
+n = {}
+print tester.mergeTwoLists(m, n)
 m = ListNode(0)
 m.next = ListNode(4)
 n = ListNode(1)
 n.next = ListNode(2)
-print tester.merge_two_lists(m, n)
-print tester.merge_two_lists({}, {})
+print tester.mergeTwoLists(m, n)
