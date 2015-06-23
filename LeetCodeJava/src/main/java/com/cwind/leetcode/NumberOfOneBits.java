@@ -23,9 +23,16 @@ public class NumberOfOneBits {
 
     @Test
     public void testHammingWeight(){
-        assertEquals(3, tester.hammingWeight(11));
+        assertEquals(2, tester.hammingWeight(12));
         assertEquals(1, tester.hammingWeight(32));
         assertEquals(1, tester.hammingWeight(Integer.MAX_VALUE + 1));
+    }
+
+    @Test
+    public void testHammingWeight2(){
+        assertEquals(2, tester.hammingWeight2(12));
+        assertEquals(1, tester.hammingWeight2(32));
+        assertEquals(1, tester.hammingWeight2(Integer.MAX_VALUE + 1));
     }
 
     public int hammingWeight(int n) {
@@ -38,5 +45,13 @@ public class NumberOfOneBits {
         return sum;
     }
 
+    public int hammingWeight2(int n) {
+        int sum = 0;
+        while(n != 0) {
+            sum += n % 2;
+            n = n / 2;
+        }
+        return sum;
+    }
 
 }
