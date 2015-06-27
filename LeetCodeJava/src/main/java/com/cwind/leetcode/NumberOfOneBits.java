@@ -10,7 +10,7 @@ import static org.junit.Assert.assertEquals;
  * User: wchen
  * Date: 3/16/15
  * Time: 7:30 PM
- * To change this template use File | Settings | File Templates.
+ * #191 - Easy
  */
 public class NumberOfOneBits {
 

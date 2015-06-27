@@ -10,7 +10,7 @@ import static org.junit.Assert.assertEquals;
  * User: wchen
  * Date: 3/17/15
  * Time: 1:38 PM
- * To change this template use File | Settings | File Templates.
+ * #136 - Medium
  */
 public class SingleNumber {
 

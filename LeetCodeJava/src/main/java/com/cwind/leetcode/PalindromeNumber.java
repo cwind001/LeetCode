@@ -11,7 +11,7 @@ import static org.junit.Assert.assertTrue;
  * User: wchen
  * Date: 3/18/15
  * Time: 2:45 PM
- * To change this template use File | Settings | File Templates.
+ * #9 - Easy
  */
 public class PalindromeNumber {
     public boolean isPalindrome(int x) {
