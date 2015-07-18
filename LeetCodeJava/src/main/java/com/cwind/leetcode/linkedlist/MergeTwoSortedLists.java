@@ -1,4 +1,4 @@
-package com.cwind.leetcode;
+package com.cwind.leetcode.linkedlist;
 
 /**
  * Created with IntelliJ IDEA.

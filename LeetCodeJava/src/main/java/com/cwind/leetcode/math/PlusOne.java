@@ -1,4 +1,4 @@
-package com.cwind.leetcode;
+package com.cwind.leetcode.math;
 
 /**
  * Created with IntelliJ IDEA.

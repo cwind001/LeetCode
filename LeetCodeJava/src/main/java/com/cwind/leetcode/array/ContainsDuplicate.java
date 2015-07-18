@@ -1,4 +1,4 @@
-package com.cwind.leetcode;
+package com.cwind.leetcode.array;
 
 import java.util.HashSet;
 import java.util.Set;

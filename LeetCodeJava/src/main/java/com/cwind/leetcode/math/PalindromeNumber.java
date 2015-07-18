@@ -1,4 +1,4 @@
-package com.cwind.leetcode;
+package com.cwind.leetcode.math;
 
 import org.junit.Before;
 import org.junit.Test;
