@@ -8,10 +8,10 @@ package com.cwind.leetcode.dp;
  * Email: billchen01@163.com
  * #10 - Hard
  */
-public class RegularMatching {
+public class RegularExpressionMatching {
 
     //Greedy algorithm, but may fail for "aaa", "ab*a*c*a" - DP will solve this.
-    public boolean isMatch(String /* string to check */ s, String /* patterns */ p) {
+    public boolean greedyIsMatch(String /* string to check */ s, String /* patterns */ p) {
         int sindex = 0, pindex=0;
         for(;pindex<p.length(); pindex++){
             if(sindex>=s.length()){
@@ -75,6 +75,31 @@ public class RegularMatching {
         }
         return true;
     }
+
+    // Dynamic Programming Solution
+    public boolean isMatch(String /* string to check */ s, String /* patterns */ p) {
+        boolean[] match = new boolean[s.length()+1];
+        for(int i=0; i<match.length; i++){
+            match[i] = false;
+        }
+        match[s.length()] = true;
+        for(int i=p.length()-1; i>=0; i--){
+            if(p.charAt(i)=='*'){
+                for(int j=s.length()-1; j>=0; j--){
+                    match[j] = match[j]||match[j+1]&&(p.charAt(i-1)=='.'||p.charAt(i-1)==s.charAt(j));
+                }
+                i--;
+            }else {
+                for(int j=0; j<s.length(); j++){
+                    match[j] = match[j+1]&&(p.charAt(i)=='.'||p.charAt(i)==s.charAt(j));
+                }
+                match[s.length()] = false;
+            }
+        }
+
+        return match[0];
+    }
+
    /*
    '.' Matches any single character.
    '*' Matches zero or more of the preceding element.
@@ -94,7 +119,7 @@ public class RegularMatching {
     isMatch("aab", "c*a*b") → true
     */
     public static void main(String[] args){
-        RegularMatching tester = new RegularMatching();
+        RegularExpressionMatching tester = new RegularExpressionMatching();
         System.out.println(tester.isMatch("aa", "a"));      // false
         System.out.println(tester.isMatch("aa", "aa"));     // true
         System.out.println(tester.isMatch("aaa", "aa"));    // false
