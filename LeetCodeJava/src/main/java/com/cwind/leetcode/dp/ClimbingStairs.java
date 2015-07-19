@@ -6,7 +6,7 @@ package com.cwind.leetcode.dp;
  * Date: 2015/7/18
  * Email: billchen01@163.com
  */
-public class ClimblingStairs {
+public class ClimbingStairs {
 
     public int climbStairs(int n) {
         if(n==0||n==1||n==2){
@@ -26,7 +26,7 @@ public class ClimblingStairs {
     }
 
     public static void main(String[] args) {
-        ClimblingStairs tester = new ClimblingStairs();
+        ClimbingStairs tester = new ClimbingStairs();
         System.out.println(tester.climbStairs(3));
         System.out.println(tester.climbStairs(4));
     }
