@@ -12,7 +12,6 @@ import java.util.Set;
  */
 public class ContainsDuplicate {
 
-    //O(nlogn), not good enough if nums contain many numbers
     public boolean containsDuplicate(int[] nums) {
         Set<Integer> uniqueSet = new HashSet<Integer>();
 
