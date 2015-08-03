@@ -1,4 +1,4 @@
-package com.cwind.leetcode.string;
+package com.cwind.leetcode.dp;
 
 /**
  * Created with IntelliJ IDEA.
