@@ -5,6 +5,7 @@ package com.cwind.leetcode.greedy;
  * User: Cwind
  * Date: 2015/11/8
  * Email: billchen01@163.com
+ * #122 Best Time to Buy and Sell Stock II - Medium
  */
 public class BestTimeToBuyAndSellStock {
     public int maxProfit(int[] prices) {
