@@ -40,17 +40,14 @@ public class TwoSum {
      * @return
      */
     public int[] twoSum2(int[] nums, int target) {
-        Map map = new HashMap<Integer, Integer>();
-        for(int i=0; i<nums.length; i++){
-            map.put(nums[i], i+1);
-        }
+        Map<Integer, Integer> hashTable = new HashMap<Integer, Integer>();
 
-        for(int i=1; i<=nums.length; i++){
-            if(map.containsKey(target-nums[i-1])&&((Integer)map.get(target-nums[i-1])>i)){
-                return new int[] {i, (Integer)map.get(target-nums[i-1])};
+        for (int i=0; i<nums.length; i++) {
+            if (hashTable.containsKey(target - nums[i])) {
+                return new int[]{hashTable.get(target - nums[i]), i};
             }
+            hashTable.put(nums[i], i);
         }
-
         return new int[0];
     }
 
